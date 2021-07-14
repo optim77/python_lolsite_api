@@ -8,6 +8,7 @@ from services import stats, get_character, get_items, get_item, get_all_life, up
 app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+# required apikey from https://pandascore.co/
 # set API_KEY=9tLPmapXYg3_0qxjjODj-jxSgSPnsfKD1GZHOyX-mFPOa6_HLy0
 # twitch key 95n171rhlco6xhc8qadt6p7njeyl2i
 @app.after_request

@@ -1,0 +1,36 @@
+{%  extends "base.html" %}
+
+{% block title %} {{itm.name}} {% endblock %}
+
+{% block main %}
+<div class="text-white">
+        <div class="row">
+            <div class="col-xl-6 text-center">
+                <img src="{{itm.image_url}}">
+            </div>
+            <div class="col-xl-6">
+                <div class="col-xl-12 text-center p-2 display-5 display-5">Patch: {{itm.videogame_versions}}</div>
+                <div class="row">
+                    <div class="col-xl-4 p-2 border rounded">Name: {{itm.name}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Armor mod: {{itm.flat_armor_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Crit chance mod: {{itm.flat_crit_chance_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">HP pool mod: {{itm.flat_hp_pool_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">HP regeneration: {{itm.flat_hp_regen_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Magic damage mod: {{itm.flat_magic_damage_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Movement speed mod: {{itm.flat_movement_speed_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Magic point mod: {{itm.flat_mp_pool_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Magic point regeneration mod: {{itm.flat_mp_regen_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Physical damage mod: {{itm.flat_physical_damage_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Spell block mod: {{itm.flat_spell_block_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Percent attack speed mod: {{itm.percent_attack_speed_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Percent life steal mod: {{itm.percent_life_steal_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Percent movement speed mod: {{itm.percent_movement_speed_mod}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Gold base: {{itm.gold_base}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Gold total: {{itm.gold_total}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Gold sale: {{itm.gold_sell}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Is trinket: {{itm.is_trinket}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

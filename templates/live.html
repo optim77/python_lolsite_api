@@ -1,0 +1,45 @@
+{%  extends "base.html" %}
+
+{% block title %} Main {% endblock %}
+
+{% block main %}
+    <div class="text-dark justify-content-center text-center">
+        <div class="text-white display-4 p-3 rounded">Lives</div>
+        <div class="row bg-white rounded ogc">
+            {% if lives == [] %}
+                <div class="text-center justify-content-around col-xl-12">
+                    <p class="text-center justify-content-around display-4">No live matches</p>
+                </div>
+            {% endif %}
+            {% for l in lives %}
+                {% for o in l.opponents %}
+                <div class="col-xl-6 border-bottom text-dark p-3">
+                    <a href="team/{{o.opponent.slug}}">
+                    <img src="{{o.opponent.image_url}}" style="height: 200px; width: 200px">
+                    </a>
+                    <p>{{o.opponent.name}}</p>
+                    <p>Location: {{o.opponent.location}}</p>
+                    <p>{{l.name}}</p>
+                    {% if loop.index%2 != 0 %}
+                    <a href="/league/{{l.league.slug}}">
+                        <img src="{{l.league.image_url}}" style="width: 50px; height: 50px">
+                    </a>
+                    <p>{{l.league.name}}</p>
+
+                    {% endif %}
+
+                </div>
+                {% if loop.index%2 == 0 %}
+
+                        <iframe src="{{l.live_embed_url}}&parent=127.0.0.1"
+                        frameborder="0"
+                        allowfullscreen="true"
+                        scrolling="no" loading="lazy" height="600px" class="col-xl-12 p-3"></iframe>
+
+
+                {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

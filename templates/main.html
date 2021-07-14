@@ -1,0 +1,47 @@
+{%  extends "base.html" %}
+
+{% block title %} Main {% endblock %}
+
+{% block main %}
+    <div class="text-dark justify-content-center text-center">
+        <div class="text-white display-4 p-3 rounded">Upcoming matches</div>
+        <div class="row bg-white rounded ogc">
+            {% for u in upcmg %}
+            <div class="col-xl-12 text-center mt-5">
+
+            </div>
+                {% for t in u.opponents %}
+                    <div class="col-xl-6 border-bottom text-dark ">
+
+                        {% if loop.index%2 != 0 %}
+                            <p>Start at: {{u.begin_at }}</p>
+                            <p>League: {{u.league.name}}</p>
+                        {% endif %}
+                        {% if loop.index%2 == 0 %}
+                            <p>Type: {% if u.match_type == "best_of" %} best of {% else %} {{u.match_type}} {% endif %} </p>
+                            <p>Number of games: {{u.number_of_games}}</p>
+                        {% endif %}
+                        <a href="team/{{t.opponent.slug}}">
+                            <img src="{{t.opponent.image_url}}" style="height: 200px; width: 200px">
+                        </a>
+                        <p>{{t.opponent.name}}</p>
+                        <p>Location: {{t.opponent.location}}</p>
+                        {% if loop.index%2 != 0 %}
+
+                        {% endif %}
+
+                    </div>
+                {% endfor %}
+                <div class="p-3 bg-dark col-xl-12"></div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+<style>
+
+
+
+</style>
+
+{% endblock %}

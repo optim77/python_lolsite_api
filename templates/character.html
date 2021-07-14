@@ -1,0 +1,43 @@
+{%  extends "base.html" %}
+
+{% block title %} Main {% endblock %}
+
+{% block main %}
+    <div class="text-white">
+        <div class="row">
+            <div class="col-xl-6">
+                <img src="{{cha.big_image_url}}">
+            </div>
+            <div class="col-xl-6">
+                <div class="col-xl-12 text-center p-2 display-5 display-5">Patch: {{cha.videogame_versions}}</div>
+                <div class="row">
+                    <div class="col-xl-4 p-2 border rounded">Armor: {{cha.armor}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Armor per level: {{cha.armorperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Armor per level: {{cha.armorperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Attack damage: {{cha.attackdamage}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Attack damage per level: {{cha.attackdamageperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Attack range: {{cha.attackrange}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Attack speed off set: {{cha.attackspeedoffset}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Attack speed per level: {{cha.attackspeedperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Crit: {{cha.crit}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Crit per level: {{cha.critperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Default health point: {{cha.hp}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Health point per level: {{cha.hpperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Health regeneration: {{cha.hpregen}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Health regeneration per level: {{cha.hpregenperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Move speed: {{cha.movespeed}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Manna point: {{cha.mp}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Manna point per level: {{cha.mpperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Manna point regeneration: {{cha.mpregen}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Manna point regeneration per level: {{cha.mpregenperlevel}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Spell block: {{cha.spellblock}}</div>
+                    <div class="col-xl-4 p-2 border rounded">Spell block per level: {{cha.spellblockperlevel}}</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock %}
